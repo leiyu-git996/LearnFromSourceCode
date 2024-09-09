@@ -101,7 +101,7 @@ System.out.println(future.get());
 
 定义了两个任务，任务1耗时200ms，任务2耗时400ms，获取回调结果限制时间都为200ms，实际运行结果：
 
-![img](https://oss-ata.alibaba.com/article/2023/11/ceff5462-4c28-4385-8519-f8e7d1f6ef7f.png)
+![image](https://github.com/user-attachments/assets/568300d7-ffb3-4da4-a50a-75cd4165b1f2)
 
 ​		可以看到任务2没有抛出`TimeoutException`，总耗时远远超过200ms，如果上层调用方限制服务时间不可超过200ms，则整个调用都会因为超时被抛弃，实际上任务1的结果是可以正常返回的。
 
@@ -359,7 +359,8 @@ public class Test1 {
 
 执行情况如下
 
-![image-20240822175359729](/Users/leiyu/Library/Application Support/typora-user-images/image-20240822175359729.png)
+![image](https://github.com/user-attachments/assets/fa26bb73-ef15-4ddc-b673-757277aa1aca)
+
 
 ```java
 public class CompletableFuture<T> implements Future<T>, CompletionStage<T> {
